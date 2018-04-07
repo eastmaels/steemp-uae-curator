@@ -1,6 +1,6 @@
 ## STEEM Philippines Curation Tool
 
-This a curation tool specifically created for STEEM Philippines Manila curator team.
+This a curation tool specifically created for STEEM Philippines curator teams.
 
 
 ## Background

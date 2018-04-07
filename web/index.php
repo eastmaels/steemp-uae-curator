@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>STEEM Philippines Manila - Curator Tool</title>
+    <title>STEEM PH - Curator Tool</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="/">STEEM Philippines Curation Tool</a>
+        <a class="navbar-brand" href="/">STEEM PH</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -233,7 +233,7 @@
 
         steem.api.setOptions({ url: 'https://api.steemit.com/' });
         $(document).ready(function() {
-          $.getJSON('/api/get-users.php', 
+          $.getJSON('./api/get-users.php', 
             { user : null }, 
             function(data) {
               data.users.forEach((user, index) => {
@@ -330,7 +330,7 @@
               $('.user-list').append('<span class="badge badge-dark user-item" style="margin-left: 2px"><a href="#/"><span class="fas fa-times-circle remove-user" aria-hidden="true"></span></a><span style="margin-left: 2px">' + newuser + '</span></span>');
               $.ajax({
                 method: 'POST',
-                url: '/api/add-user.php', 
+                url: './api/add-user.php', 
                 data: { user : newuser }
               })
               .done(response => {
@@ -352,7 +352,7 @@
             $('.user-item').filter(function() { return $.text([this]) === removeUser; }).remove();
             $.ajax({
               method: 'POST',
-              url: '/api/remove-user.php', 
+              url: './api/remove-user.php', 
               data: { user : removeUser }, 
             })
             .done(response => {
