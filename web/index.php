@@ -67,8 +67,7 @@
         <div class="col-md-8 blog-entries">
 
           <!-- Page Heading -->
-          <h1 class="my-4">STEEM Philippines
-            <small>Manila</small>
+          <h1 class="my-4">STEEM Philippines-UAE
           </h1>
           <div class="row">
             <div class="col text-center">
